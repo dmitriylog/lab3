@@ -1,0 +1,5 @@
+Calculator algorithm
+
+Class Calculator: two constructors (1 - without starters, 2nd - with start value)
+Main math methods: summ(value) - addition, diff(value) - difference, multipl(value) - multiplication, division(value), root_sqrt() - square root, power(exponent)
+Main methods: reset(),set_value(value),get_result(),void display()
