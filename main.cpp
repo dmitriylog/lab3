@@ -74,6 +74,42 @@ public:
     }
 };
 
+// пользовательский интерфейс
+class Calculator_UI{
+private:
+    Calculator calc;
+    bool external_mode;
+public:
+    Calculator_UI() : external_mode(false){}
+    void display_menu(){
+        cout <<"\n--- КАЛЬКУЛЯТОР ---" << endl;
+        if (external_mode){
+            cout << "==Расширенный режим ==" << endl;
+        }
+        cout << "1. Сложение (+)" << endl;
+        cout << "2. Вычитание (-)" << endl;
+        cout << "3. Умножение (*)" << endl;
+        cout << "4. Деление (/)" << endl;
+        cout << "5. Возведение в степень (^)" << endl;
+        cout << "6. Квадратный корень (^0.5)" << endl;
+
+        if (external_mode){
+            cout << "7. Синус (sin)" << endl;
+            cout << "8. Косинус (cos)" << endl;
+            cout << "9. Тангенс (tg)" << endl;
+            cout << "10. Натуральный логарифм (ln)" << endl;
+            cout << "11. Работа с памятью (memory)" << endl;
+            cout << "12. Переключить режим (на стандартный)" << endl;
+        }
+        else{
+            cout << "7. Переключить режим (на расширенный)" << endl;
+        }
+        cout << "0. Выход" << endl;
+        cout << "Текущий результат: " << calc.get_result() << endl;
+    }
+
+};
+
 int main()
 {
 
