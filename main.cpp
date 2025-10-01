@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// калькулятор
+// калькулятор -- 5 лаба
 
 class Calculator {
 private:
