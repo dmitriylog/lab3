@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -37,6 +38,40 @@ public:
         result /= value;
     }
 
+    // 5. квадратный корень
+    void root_sqrt(){
+        if (result < 0){
+            throw invalid_argument ("Ошибка: корень из отрицательного числа");
+        }
+        result = sqrt(result);
+    }
+
+    // 6. возведение в степень
+    void power(double exponent){
+        result = pow(result,exponent);
+    }
+
+    // методы - отображение
+
+    // 1. сброс значения
+    void reset(){
+        result = 0.0;
+    }
+
+    // 2. установка значения
+    void set_value(double value){
+        result = value;
+    }
+
+    // 3. получение значения
+    double get_result(){
+        return result;
+    }
+
+    // 4. вывод результата
+    void display(){
+        cout << "Результат: " << result << endl;
+    }
 };
 
 int main()
